@@ -2,6 +2,7 @@
 import Mypic from '../assets/mypic.jpg';
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import Navbar from '../components/Navbar';
 // import {Link}
 // import { ArrowRight, Twitter, Instagram, Mail, MapPin, Phone, Menu, X } from 'lucide-react';
 
@@ -27,66 +28,9 @@ const Portfolio = () => {
     }, []);
 
   return (
-        <div className="text-gray-800 font-sans">
-          
+    <div className="text-gray-800 font-sans">
           {/* Header */}
-          <header className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${isScrolled ? 'bg-white/90 backdrop-blur-md shadow-lg' : 'bg-transparent'}`}>
-            <div className="container mx-auto px-6 py-4">
-              <nav className="flex justify-between items-center">
-                <a href="#" className="text-2xl font-bold flex items-center gap-2">
-                  <span className="w-3 h-3 rounded-full bg-gradient-to-r from-teal-500 to-indigo-500"></span>
-                  Emmanuel Dey
-                </a>
-                
-                <div className="hidden lg:flex items-center gap-8">
-                  <ul className="flex gap-8">
-                    <li><a href="#about" className="hover:text-teal-500 transition-colors">About Me</a></li>
-                    <Link to="/experience">
-                      <li><a href="" className="hover:text-teal-500 transition-colors">Experience</a></li>
-                    </Link>
-                    <li><a href="#origin" className="hover:text-teal-500 transition-colors">Courses</a></li>
-                    {/* <li><a href="#skills" className="hover:text-teal-500 transition-colors">Skills</a></li> */}
-                  </ul>
-                  <a href="#contact" className="bg-indigo-700 px-6 py-2 rounded-full text-white font-medium hover:shadow-lg hover:shadow-teal-500/20 transition-all transform hover:-translate-y-1">
-                    Contact Me
-                  </a>
-                </div>
-
-                <button className="lg:hidden text-2xl" onClick={() => setIsMenuOpen(true)}>
-                  {/* <Menu /> */}
-                </button>
-              </nav>
-            </div>
-          </header>
-
-          {/* Mobile Menu */}
-          <div className={`fixed inset-0 bg-white z-50 transform transition-transform duration-300 ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
-            <div className="container mx-auto px-6 py-4">
-              <div className="flex justify-between items-center">
-                <a href="#" className="text-2xl font-bold flex items-center gap-2">
-                  <span className="w-3 h-3 rounded-full bg-gradient-to-r from-teal-500 to-indigo-500"></span>
-                  Emmanuel Dey
-                </a>
-                <button className="text-2xl" onClick={() => setIsMenuOpen(false)}>
-                  {/* <X /> */}
-                </button>
-              </div>
-              
-              <div className="flex flex-col items-center justify-center h-[80vh]">
-                <ul className="flex flex-col gap-8 text-center text-2xl">
-                  <li><a href="#about" onClick={() => setIsMenuOpen(false)} className="hover:text-teal-500 transition-colors">About Me</a></li>
-                  <li><a href="#Experience" onClick={() => setIsMenuOpen(false)} className="hover:text-teal-500 transition-colors">Experience</a></li>
-                  <li><a href="#origin" onClick={() => setIsMenuOpen(false)} className="hover:text-teal-500 transition-colors">Courses</a></li>
-                  {/* <li><a href="#skills" onClick={() => setIsMenuOpen(false)} className="hover:text-teal-500 transition-colors">Skills</a></li> */}
-                  <li>
-                    <a href="#contact" onClick={() => setIsMenuOpen(false)} className="bg-indigo-700 px-8 py-3 rounded-full text-white font-medium inline-block mt-4">
-                      Contact Me
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
+          <Navbar />
 
           {/* Hero Section */}
           <section className="relative min-h-screen flex items-center bg-gradient-to-br from-teal-50 to-indigo-50">
@@ -167,7 +111,7 @@ const Portfolio = () => {
                       
                       <div className="flex flex-wrap gap-y-2 mt-6">
                         <span className="bg-gradient-to-r from-blue-500 to-blue-400 text-white px-4 py-2 rounded-full text-sm font-medium">Problem Solver</span>
-                        <span className="bg-gradient-to-r from-indigo-500 to-indigo-400 text-white px-4 py-2 rounded-full text-sm font-medium">Creative Thinker</span>
+                        <span className="bg-green-600 text-white border-green-600 px-4 py-2 rounded-full text-sm font-medium">Creative Thinker</span>
                         <span className="bg-gradient-to-r from-purple-500 to-purple-400 text-white px-4 py-2 rounded-full text-sm font-medium">Tech Enthusiast</span>
                       </div>
                     </div>

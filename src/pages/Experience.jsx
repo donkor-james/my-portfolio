@@ -1,4 +1,5 @@
 import React from 'react';
+import Navbar from '../components/Navbar';
 // import { Briefcase, Calendar, MapPin, ExternalLink, Github, Code, Users, Award } from 'lucide-react';
 
 const ExperiencePage = () => {
@@ -124,27 +125,11 @@ const ExperiencePage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-50 to-blue-50">
       {/* Header */}
-      <header className="bg-white shadow-sm border-b">
-        <div className="max-w-6xl mx-auto px-4 py-4">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-8">
-              <h1 className="text-2xl font-bold text-gray-900">Emmanuel Dey</h1>
-              <nav className="hidden md:flex space-x-6">
-                <a href="/" className="text-gray-600 hover:text-purple-600 transition-colors">About Me</a>
-                <a href="#" className="text-purple-600 font-medium">Experience</a>
-                <a href="#" className="text-gray-600 hover:text-purple-600 transition-colors">Courses</a>
-              </nav>
-            </div>
-            <button className="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition-colors">
-              Contact Me
-            </button>
-          </div>
-        </div>
-      </header>
+      <Navbar />
 
-      <div className="max-w-6xl mx-auto px-4 py-8">
+      <div className="max-w-6xl mx-auto px-4 py-12">
         {/* Page Title */}
-        <div className="text-center mb-12">
+        <div className="text-center mb-12 mt-16">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">Experience</h1>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             My journey in technology through professional experiences and personal projects
