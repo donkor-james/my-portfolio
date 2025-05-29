@@ -1,0 +1,184 @@
+
+{
+    "HomePage":
+    {
+      "aboutMe": {
+        "title": "Who I Am",
+        "subtitle": "Computer Science Major with Human-Centered Design Minor",
+        "description": [
+          "I'm a passionate computer science student with a deep interest in creating technology that makes a positive impact. My journey in tech started when I was young, tinkering with computers and fascinated by how software works.",
+          "I believe that the best technology is designed with humans in mind - intuitive, accessible, and focused on solving real problems. That's why I'm combining my technical skills with human-centered design principles.",
+          "When I'm not coding or designing, you can find me exploring new ideas, reading about emerging technologies, or collaborating with fellow students on innovative projects. I'm constantly curious and always eager to learn something new."
+        ],
+        "tags": ["Problem Solver", "Creative Thinker", "Tech Enthusiast"]
+      },
+      "passions": {
+        "title": "What I Love Doing",
+        "interests": [
+          {
+            "id": 1,
+            "title": "Coding & Development",
+            "description": "I'm passionate about writing clean, efficient code and building applications that solve real-world problems. I especially enjoy frontend development and creating intuitive user interfaces.",
+            "skills": ["React", "JavaScript", "UI/UX"],
+            "bgColor": "purple-50"
+          },
+          {
+            "id": 2,
+            "title": "Reading & Learning",
+            "description": "I have an insatiable appetite for knowledge. Whether it's tech blogs, science fiction, or philosophy books, I love expanding my horizons through reading and continuous learning.",
+            "skills": ["Tech Books", "Science Fiction", "Online Courses"],
+            "bgColor": "teal-100"
+
+          },
+          {
+            "id": 3,
+            "title": "Mentoring & Teaching",
+            "description": "I find great fulfillment in helping others learn and grow. Whether it's tutoring fellow students or explaining technology concepts to beginners, I enjoy sharing knowledge.",
+            "skills": ["Peer Tutoring", "Workshops", "Study Groups"],
+            "bgColor": "blue-100"
+          },
+          {
+            "id": 4,
+            "title": "Community Engagement",
+            "description": "I'm actively involved in tech communities and local initiatives. I believe in the power of collaboration and community-driven projects to create meaningful impact and drive innovation.",
+            "skills": ["Tech Meetups", "Hackathons", "Volunteer Work"]
+          },
+          {
+            "id": 5,
+            "title": "Entrepreneurship",
+            "description": "I'm fascinated by startups and business innovation. I enjoy exploring how technology can solve business challenges and create new opportunities in various industries.",
+            "skills": ["Startups", "Business Models", "Tech Innovation"],
+            "bgColor": "amber-200"
+          }
+        ]
+      },
+      "origin": {
+        "title": "Where I'm From",
+        "subtitle": "Roots in Ghana",
+        "description": [
+          "Born and raised in Ghana, I grew up surrounded by a rich culture that values community, creativity, and resilience. These values have profoundly shaped my approach to both life and technology.",
+          "Growing up in Ghana gave me a unique perspective on how technology can bridge gaps and create opportunities. I witnessed firsthand how access to computers and the internet could transform communities and open doors to new possibilities.",
+          "My journey from Ghana to studying Computer Science at KNUST has been filled with challenges and growth. Each step has reinforced my belief that technology, when designed thoughtfully, can be a powerful force for positive change."
+        ],
+        "quote": "My heritage and background have given me a unique lens through which I view technology and its potential to connect and empower communities.",
+        "details": {
+          "country": "Ghana",
+          "city": "Kumasi",
+          "university": "KNUST",
+          "languages": "English, Twi"
+        }
+      }
+    },
+
+
+
+    "ExperiencePage":
+{
+  "workExperience": [
+    {
+      "id": 1,
+      "title": "Frontend Developer Intern",
+      "company": "TechCorp Ghana",
+      "location": "Accra, Ghana",
+      "duration": "Jun 2024 - Aug 2024",
+      "type": "Internship",
+      "description": "Developed responsive web applications using React and Tailwind CSS. Collaborated with design team to implement user-centered interfaces that improved user engagement by 30%.",
+      "technologies": ["React", "JavaScript", "Tailwind CSS", "Git", "Figma"],
+      "achievements": [
+        "Built 3 major feature components for the main product",
+        "Improved page load speed by 25% through optimization",
+        "Mentored 2 junior interns on best practices"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "UI/UX Design Assistant",
+      "company": "Design Studio Kumasi",
+      "location": "Kumasi, Ghana",
+      "duration": "Jan 2024 - May 2024",
+      "type": "Part-time",
+      "description": "Assisted in creating user-centered designs for mobile and web applications. Conducted user research and usability testing to inform design decisions.",
+      "technologies": ["Figma", "Adobe XD", "Sketch", "InVision", "Miro"],
+      "achievements": [
+        "Designed wireframes for 5+ client projects",
+        "Conducted usability tests with 50+ users",
+        "Created design system components library"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Tech Community Volunteer",
+      "company": "Ghana Tech Hub",
+      "location": "Kumasi, Ghana",
+      "duration": "Sep 2023 - Present",
+      "type": "Volunteer",
+      "description": "Organize tech meetups and workshops for students and professionals. Help bridge the gap between academia and industry by facilitating knowledge sharing sessions.",
+      "technologies": ["Community Building", "Event Management", "Mentoring"],
+      "achievements": [
+        "Organized 12+ tech meetups with 200+ attendees",
+        "Mentored 25+ students in career development",
+        "Built partnerships with 8 local tech companies"
+      ]
+    }
+  ],
+  "personalProjects": [
+    {
+      "id": 1,
+      "title": "EduConnect Platform",
+      "description": "A comprehensive learning management system designed to connect students with quality educational resources. Features include interactive courses, progress tracking, and peer collaboration tools.",
+      "technologies": ["React", "Node.js", "MongoDB", "Socket.io", "Tailwind CSS"],
+      "features": [
+        "Real-time chat and collaboration",
+        "Progress tracking and analytics",
+        "Mobile-responsive design",
+        "Payment integration for premium courses"
+      ],
+      "links": {
+        "github": "https://github.com/emmanuel-dey/educonnect",
+        "live": "https://educonnect-demo.vercel.app"
+      },
+      "status": "In Development",
+      "image": "/api/placeholder/400/250"
+    },
+    {
+      "id": 2,
+      "title": "Local Business Directory",
+      "description": "A web application helping local businesses in Kumasi get discovered online. Features business listings, reviews, and location-based search functionality.",
+      "technologies": ["React", "Firebase", "Google Maps API", "Stripe"],
+      "features": [
+        "Location-based business search",
+        "User reviews and ratings",
+        "Business owner dashboard",
+        "Mobile-first design approach"
+      ],
+      "links": {
+        "github": "https://github.com/emmanuel-dey/kumasi-directory",
+        "live": "https://kumasi-biz.netlify.app"
+      },
+      "status": "Completed",
+      "image": "/api/placeholder/400/250"
+    },
+    {
+      "id": 3,
+      "title": "Student Finance Tracker",
+      "description": "A budgeting app specifically designed for university students to track expenses, set savings goals, and manage their financial health throughout their academic journey.",
+      "technologies": ["React Native", "SQLite", "Chart.js", "AsyncStorage"],
+      "features": [
+        "Expense categorization",
+        "Budget planning and alerts",
+        "Visual spending analytics",
+        "Goal setting and tracking"
+      ],
+      "links": {
+        "github": "https://github.com/emmanuel-dey/student-finance"
+      },
+      "status": "Completed",
+      "image": "/api/placeholder/400/250"
+    }
+  ]
+},
+    "CoursesPage":
+{
+
+}
+}
