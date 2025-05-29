@@ -380,6 +380,50 @@ const Courses = () => {
           ))}
         </div>
       </div>
+            <footer className="bg-gradient-to-r from-gray-900 to-gray-800 text-white py-6 mt-10">
+            <div className="container mx-auto px-6">
+              <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+                {/* Basic Info */}
+                <div className="flex items-center gap-2">
+                  <span className="w-2 h-2 rounded-full bg-gradient-to-r from-teal-500 to-indigo-500"></span>
+                  <span className="font-bold">Emmanuel Dey</span>
+                  <span className="text-gray-400 text-sm hidden md:inline">•</span>
+                  <span className="text-gray-400 text-sm hidden md:inline">Computer Science Student</span>
+                </div>
+                
+                {/* Quick Links */}
+                <div className="flex flex-wrap justify-center gap-4 text-sm">
+                  <a href="#about" className="text-gray-400 hover:text-teal-400 transition-colors">About</a>
+                  <a href="#Experience" className="text-gray-400 hover:text-teal-400 transition-colors">Experience</a>
+                  <a href="#origin" className="text-gray-400 hover:text-teal-400 transition-colors">Courses</a>
+                  {/* <a href="#skills" className="text-gray-400 hover:text-teal-400 transition-colors">Skills</a> */}
+                </div>
+                
+                {/* Social Links */}
+                <div className="flex items-center gap-3">
+                  <a href="#" className="w-7 h-7 bg-gray-700 hover:bg-teal-500 rounded-full flex items-center justify-center transition-colors">
+                    {/* <Github size={14} /> */}
+                  </a>
+                  <a href="#" className="w-7 h-7 bg-gray-700 hover:bg-teal-500 rounded-full flex items-center justify-center transition-colors">
+                    {/* <Twitter size={14} /> */}
+                  </a>
+                  <a href="#" className="w-7 h-7 bg-gray-700 hover:bg-teal-500 rounded-full flex items-center justify-center transition-colors">
+                    {/* <Instagram size={14} /> */}
+                  </a>
+                  <a href="mailto:emmanuel.dey@example.com" className="w-7 h-7 bg-gray-700 hover:bg-teal-500 rounded-full flex items-center justify-center transition-colors">
+                    {/* <Mail size={14} /> */}
+                  </a>
+                </div>
+              </div>
+              
+              <div className="border-t border-gray-700 mt-4 pt-4">
+                <div className="flex flex-col md:flex-row justify-between items-center text-xs text-gray-400">
+                  <div>© {new Date().getFullYear()} Emmanuel Dey. All rights reserved.</div>
+                  <div>Designed with <span className="text-red-500">♥</span></div>
+                </div>
+              </div>
+            </div>
+          </footer>    
     </div>
   );
 };
