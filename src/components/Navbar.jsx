@@ -198,13 +198,13 @@ const Navbar = () => {
           <div className="mt-12 pt-8 border-t border-gray-200">
             <p className="text-sm font-medium text-gray-600 mb-4">Connect with me</p>
             <div className="flex gap-4">
-              <a href="#" className="w-10 h-10 bg-gray-100 hover:bg-teal-500 rounded-full flex items-center justify-center transition-colors group">
+              <a href="" className="w-10 h-10 bg-gray-100 hover:bg-teal-500 rounded-full flex items-center justify-center transition-colors group">
                 <Github size={18} className="text-gray-600 group-hover:text-white" />
               </a>
               <a href="#" className="w-10 h-10 bg-gray-100 hover:bg-blue-500 rounded-full flex items-center justify-center transition-colors group">
                 <Twitter size={18} className="text-gray-600 group-hover:text-white" />
               </a>
-              <a href="#" className="w-10 h-10 bg-gray-100 hover:bg-pink-500 rounded-full flex items-center justify-center transition-colors group">
+              <a href="" className="w-10 h-10 bg-gray-100 hover:bg-pink-500 rounded-full flex items-center justify-center transition-colors group">
                 <Instagram size={18} className="text-gray-600 group-hover:text-white" />
               </a>
               <a href="mailto:emmanuel.dey@example.com" className="w-10 h-10 bg-gray-100 hover:bg-indigo-500 rounded-full flex items-center justify-center transition-colors group">
