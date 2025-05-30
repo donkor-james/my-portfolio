@@ -304,7 +304,7 @@ const Portfolio = () => {
                 {/* Quick Links */}
                 <div className="flex flex-wrap justify-center gap-4 text-sm">
                   <Link to=''>
-                    <a href="#about" className="text-gray-400 hover:text-teal-400 transition-colors">About</a>
+                    <a href="#about" className="text-gray-400 hover:text-teal-400 transition-colors">Home</a>
                   </Link>
                   <Link to='/experience'>
                     <a href="" className="text-gray-400 hover:text-teal-400 transition-colors">Experience</a>
