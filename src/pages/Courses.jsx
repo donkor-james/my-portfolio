@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Navbar from '../components/Navbar';
-// import { BookOpen, Code, Palette, Brain, Calculator, Award } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { BookOpen, Code, Palette, Brain, Calculator, Award, Linkedin, Github, Mail } from 'lucide-react';
 
 const Courses = () => {
   const [activeTab, setActiveTab] = useState('major');
@@ -8,7 +9,7 @@ const Courses = () => {
   const courseData = {
     major: {
       title: "Computer Science Major",
-      //   icon: <Code className="w-5 h-5" />,
+        icon: <Code className="w-5 h-5" />,
       color: "purple",
       description: "Core computer science courses focusing on programming, algorithms, and software development",
       courses: [
@@ -79,7 +80,7 @@ const Courses = () => {
     },
     minor: {
       title: "Human-Centered Design Minor",
-      //   icon: <Palette className="w-5 h-5" />,
+        icon: <Palette className="w-5 h-5" />,
       color: "blue",
       description: "Interdisciplinary approach to design thinking and user experience",
       courses: [
@@ -132,7 +133,7 @@ const Courses = () => {
     },
     other: {
       title: "Additional Courses",
-      //   icon: <Brain className="w-5 h-5" />,
+        icon: <Brain className="w-5 h-5" />,
       color: "green",
       description: "Supplementary courses in mathematics, communication, and professional development",
       courses: [
@@ -264,7 +265,7 @@ const Courses = () => {
         </div>
 
         {/* Academic Summary */}
-        <div className="grid md:grid-cols-3 gap-6 mb-12">
+        <div className="grid md:grid-cols-2 gap-6 mb-12">
           <div className="bg-white rounded-xl shadow-lg p-6 text-center">
             {/* <BookOpen className="w-8 h-8 text-purple-600 mx-auto mb-3" /> */}
             <h3 className="text-2xl font-bold text-gray-900 mb-1">
@@ -281,13 +282,12 @@ const Courses = () => {
             </h3>
             <p className="text-gray-600">Total Credits</p>
           </div>
-          <div className="bg-white rounded-xl shadow-lg p-6 text-center">
-            {/* <Award className="w-8 h-8 text-green-600 mx-auto mb-3" /> */}
+          {/* <div className="bg-white rounded-xl shadow-lg p-6 text-center">
             <h3 className="text-2xl font-bold text-gray-900 mb-1">
               {calculateGPA(Object.values(courseData).flatMap(section => section.courses))}
             </h3>
             <p className="text-gray-600">Current GPA</p>
-          </div>
+          </div> */}
         </div>
 
         {/* Tab Navigation */}
@@ -333,10 +333,10 @@ const Courses = () => {
               </div>
               <div className="text-gray-600">Credits</div>
             </div>
-            <div className="text-center">
+            {/* <div className="text-center">
               <div className="text-2xl font-bold text-gray-900">{calculateGPA(currentSection.courses)}</div>
               <div className="text-gray-600">GPA</div>
-            </div>
+            </div> */}
           </div>
         </div>
 
@@ -354,10 +354,10 @@ const Courses = () => {
                   <p className="text-sm text-gray-500">{course.semester}</p>
                 </div>
                 <div className="text-right ml-4">
-                  <span className={`px-3 py-1 rounded-full text-sm font-medium ${getGradeColor(course.grade)}`}>
+                  {/* <span className={`px-3 py-1 rounded-full text-sm font-medium ${getGradeColor(course.grade)}`}>
                     {course.grade}
                   </span>
-                  <p className="text-sm text-gray-500 mt-2">{course.credits} credits</p>
+                  <p className="text-sm text-gray-500 mt-2">{course.credits} credits</p> */}
                 </div>
               </div>
 
@@ -394,12 +394,12 @@ const Courses = () => {
                 {/* Quick Links */}
                 <div className="flex flex-wrap justify-center gap-4 text-sm">
                   <Link to=''>
-                    <a href="#about" className="text-gray-400 hover:text-teal-400 transition-colors">Home</a>
+                    <a href="" className="text-gray-400 hover:text-teal-400 transition-colors">Home</a>
                   </Link>
                   <Link to='/experience'>
                     <a href="" className="text-gray-400 hover:text-teal-400 transition-colors">Experience</a>
                   </Link>
-                  <Link to='courses'>
+                  <Link to='/courses'>
                     <a href="" className="text-gray-400 hover:text-teal-400 transition-colors">Courses</a>
                   </Link>
                   {/* <a href="#skills" className="text-gray-400 hover:text-teal-400 transition-colors">Skills</a> */}
@@ -407,17 +407,19 @@ const Courses = () => {
                 
                 {/* Social Links */}
                 <div className="flex items-center gap-3">
-                  <a href="#" className="w-7 h-7 bg-gray-700 hover:bg-teal-500 rounded-full flex items-center justify-center transition-colors">
+                  <a href="https://github.com/emmanueldey" className="w-7 h-7 bg-gray-700 hover:bg-teal-500 rounded-full flex items-center justify-center transition-colors">
                     {/* <Github size={14} /> */}
+                    <Github size={16} />
                   </a>
-                  <a href="#" className="w-7 h-7 bg-gray-700 hover:bg-teal-500 rounded-full flex items-center justify-center transition-colors">
+                  <a href="https://linkedin.com/in/emmanuel1010" className="w-7 h-7 bg-gray-700 hover:bg-teal-500 rounded-full flex items-center justify-center transition-colors">
+                    <Linkedin size={16} />
                     {/* <Twitter size={14} /> */}
                   </a>
-                  <a href="#" className="w-7 h-7 bg-gray-700 hover:bg-teal-500 rounded-full flex items-center justify-center transition-colors">
-                    {/* <Instagram size={14} /> */}
-                  </a>
-                  <a href="mailto:emmanuel.dey@example.com" className="w-7 h-7 bg-gray-700 hover:bg-teal-500 rounded-full flex items-center justify-center transition-colors">
-                    {/* <Mail size={14} /> */}
+                  {/* <a href="#" className="w-7 h-7 bg-gray-700 hover:bg-teal-500 rounded-full flex items-center justify-center transition-colors">
+                    <Instagram size={14} />
+                  </a> */}
+                  <a href="mailto:emmanuel.p.dey.28@dartmouth.edu" className="w-7 h-7 bg-gray-700 hover:bg-teal-500 rounded-full flex items-center justify-center transition-colors">
+                    <Mail size={14} />
                   </a>
                 </div>
               </div>
@@ -429,7 +431,7 @@ const Courses = () => {
               </div>
             </div>
           </footer>    
- 
+
     </div>
   );
 };

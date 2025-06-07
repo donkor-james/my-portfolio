@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
-// import { Briefcase, Calendar, MapPin, ExternalLink, Github, Code, Users, Award } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Briefcase, Calendar, MapPin, ExternalLink, Github, Code, Users, Award, Linkedin, Mail } from 'lucide-react';
 
 const ExperiencePage = () => {
   const workExperience = [
@@ -288,12 +289,12 @@ const ExperiencePage = () => {
                 {/* Quick Links */}
                 <div className="flex flex-wrap justify-center gap-4 text-sm">
                   <Link to=''>
-                    <a href="#about" className="text-gray-400 hover:text-teal-400 transition-colors">Home</a>
+                    <a href="" className="text-gray-400 hover:text-teal-400 transition-colors">Home</a>
                   </Link>
                   <Link to='/experience'>
                     <a href="" className="text-gray-400 hover:text-teal-400 transition-colors">Experience</a>
                   </Link>
-                  <Link to='courses'>
+                  <Link to='/courses'>
                     <a href="" className="text-gray-400 hover:text-teal-400 transition-colors">Courses</a>
                   </Link>
                   {/* <a href="#skills" className="text-gray-400 hover:text-teal-400 transition-colors">Skills</a> */}
@@ -301,17 +302,19 @@ const ExperiencePage = () => {
                 
                 {/* Social Links */}
                 <div className="flex items-center gap-3">
-                  <a href="#" className="w-7 h-7 bg-gray-700 hover:bg-teal-500 rounded-full flex items-center justify-center transition-colors">
+                  <a href="https://github.com/emmanueldey" className="w-7 h-7 bg-gray-700 hover:bg-teal-500 rounded-full flex items-center justify-center transition-colors">
                     {/* <Github size={14} /> */}
+                    <Github size={16} />
                   </a>
-                  <a href="#" className="w-7 h-7 bg-gray-700 hover:bg-teal-500 rounded-full flex items-center justify-center transition-colors">
+                  <a href="https://linkedin.com/in/emmanuel1010" className="w-7 h-7 bg-gray-700 hover:bg-teal-500 rounded-full flex items-center justify-center transition-colors">
+                    <Linkedin size={16} />
                     {/* <Twitter size={14} /> */}
                   </a>
-                  <a href="#" className="w-7 h-7 bg-gray-700 hover:bg-teal-500 rounded-full flex items-center justify-center transition-colors">
-                    {/* <Instagram size={14} /> */}
-                  </a>
-                  <a href="mailto:emmanuel.dey@example.com" className="w-7 h-7 bg-gray-700 hover:bg-teal-500 rounded-full flex items-center justify-center transition-colors">
-                    {/* <Mail size={14} /> */}
+                  {/* <a href="#" className="w-7 h-7 bg-gray-700 hover:bg-teal-500 rounded-full flex items-center justify-center transition-colors">
+                    <Instagram size={14} />
+                  </a> */}
+                  <a href="mailto:emmanuel.p.dey.28@dartmouth.edu" className="w-7 h-7 bg-gray-700 hover:bg-teal-500 rounded-full flex items-center justify-center transition-colors">
+                    <Mail size={14} />
                   </a>
                 </div>
               </div>
@@ -323,7 +326,7 @@ const ExperiencePage = () => {
               </div>
             </div>
           </footer>    
-  
+
     </div>
   );
 };

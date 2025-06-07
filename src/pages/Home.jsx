@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 // import {Link}
-// import { ArrowRight, Twitter, Instagram, Mail, MapPin, Phone, Menu, X } from 'lucide-react';
+import { ArrowRight, Twitter, Instagram, Mail, MapPin, Phone, Menu, X, Github, Linkedin, ChevronDown } from 'lucide-react';
 
 // Main App Component
 const Portfolio = () => {
@@ -30,22 +30,23 @@ const Portfolio = () => {
   return (
     <div className="text-gray-800 font-sans">
           {/* Header */}
-          <Navbar />
 
+          <Navbar />
           {/* Hero Section */}
           <section className="relative min-h-screen flex items-center bg-gradient-to-br from-teal-50 to-indigo-50">
             <div className="absolute top-0 right-0 w-full md:w-1/2 h-full bg-gradient-to-br from-teal-100/30 to-indigo-100/30 rounded-bl-full"></div>
       
             {/* Decorative circles */}
-            <div className="absolute top-32 left-10 w-16 h-16 bg-teal-500/10 rounded-full"></div>
-            <div className="absolute bottom-32 right-10 w-20 h-20 bg-indigo-500/10 rounded-full"></div>
-            <div className="absolute top-1/2 left-1/3 w-8 h-8 bg-purple-500/10 rounded-full"></div>
-            
+            <div className='hidden md:block'>
+              <div className="absolute top-32 left-10 w-16 h-16 bg-teal-500/10 rounded-full"></div>
+              <div className="absolute bottom-32 right-10 w-20 h-20 bg-indigo-500/10 rounded-full"></div>
+              <div className="absolute top-1/2 left-1/3 w-8 h-8 bg-purple-500/10 rounded-full"></div>       
+            </div>
             <div className="container mx-auto px-6 relative z-10">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div className="flex flex-col-reverse md:grid grid-cols-1 lg:grid-cols-2 md:gap-12 items-center">
                 <div className="space-y-6">
-                  <h1 className="text-3xl text-indigo-700 md:text-4xl lg:text-5xl font-bold leading-tight">
-                    Hello, I'm Emmanuel
+                  <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
+                    Hello, I'm <span className='text-indigo-700'>Emmanuel</span>
                   </h1>
                   <p className="text-gray-600 text-lg border-l-4 border-indigo-500 pl-4">
                     A Computer Science major with a minor in Human-Centered Design. Passionate about creating technology that positively impacts people's lives.
@@ -54,34 +55,34 @@ const Portfolio = () => {
                     {/* <a href="#about" className="bg-gradient-to-r from-teal-500 to-indigo-500 px-8 py-3 rounded-full font-medium flex items-center hover:shadow-lg hover:shadow-teal-500/20 transition-all transform hover:-translate-y-1">
                       Get to Know Me <ArrowRight size={18} />
                     </a> */}
-                    <a href="#Experience" className="border hover:border-teal-500 border-indigo-700 px-8 py-3 rounded-full text-indigo-600 font-medium transition-all transform hover:-translate-y-1 hover:bg-indigo-50 mt-4">
+                    <a href="#Experience" className="border hover:border-teal-500 border-indigo-700 px-8 py-3 rounded-full text-indigo-600 font-medium transition-all transform hover:-translate-y-1 hover:bg-indigo-50 mt-2 md:mt-6">
                       My Resume
                     </a>
                   </div>
                 </div>
-                <div className="hidden lg:flex justify-center items-center">
-                  <div className="relative w-80 h-80 rounded-full border-4 border-teal-500/30 p-2">
+                <div className="lg:flex justify-center items-center my-12 md:mb-0 md:mt-0">
+                  <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full border-4 border-teal-500/30 p-2">
                     <img 
                       src={Mypic} 
                       alt="Emmanuel Dey" 
                       className="w-full h-full object-cover rounded-full shadow-xl"
                     />
-                    <div className="absolute -bottom-4 -right-4 bg-gradient-to-r from-teal-500 to-indigo-500 text-white px-4 py-2 rounded-full text-sm font-medium">
+                    {/* <div className="absolute -bottom-4 -right-4 bg-gradient-to-r from-teal-500 to-indigo-500 px-4 py-2 rounded-full text-sm font-medium">
                       CS Student
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </div>
             </div>
       
-            <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 flex flex-col items-center">
+            <div className="absolute bottom-0 md:bottom-20 left-1/2 transform -translate-x-1/2 flex flex-col items-center">
               <span className="text-sm mb-2 text-slate-400 bg-gradient-to-r from-teal-500 to-indigo-500 bg-clip-text font-medium">Scroll Down</span>
-              {/* <ChevronDown size={20} className="text-indigo-500 animate-bounce" /> */}
+              <ChevronDown size={20} className="text-indigo-500 animate-bounce" />
             </div>
           </section>
 
           {/* About Me Section */}
-          <section id="about" className="bg-gradient-to-br from-indigo-50 to-teal-50 border py-20 md:py-24 md:pb-32">
+          <section id="about" className="bg-gradient-to-br from-indigo-50 to-teal-50 border py-20 md:py-24 md:pb-32 mt-8 md:mt-0">
             <div className=''>
               <div className="container mx-auto px-2">
                 <div className="text-center mb-2">
@@ -257,34 +258,38 @@ const Portfolio = () => {
                     </p>
                   </div>
                 </div>
-                
-                <div className="relative order-1 lg:order-2">
-                  <div className="bg-white p-6 rounded-2xl shadow-xl">
-                    <div className="aspect-w-16 aspect-h-9 rounded-xl overflow-hidden bg-indigo-100">
-                      <div className="flex items-center justify-center h-64 bg-gradient-to-br from-indigo-200 to-teal-200">
-                        {/* <MapPin size={64} className="text-indigo-500 opacity-50" /> */}
-                      </div>
+              <div className="relative order-1 lg:order-2">
+                <div className="bg-white p-6 rounded-2xl shadow-xl">
+                  <div className="aspect-w-16 aspect-h-9 rounded-xl overflow-hidden bg-indigo-100">
+                  <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345099966!2d-0.20544238468129265!3d5.614818295138353!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdfb9e9a9c02a81%3A0x7e90b6f4b8c4b5b6!2sAccra%2C%20Ghana!5e0!3m2!1sen!2sus!4v1639982924676!5m2!1sen!2sus" 
+                    width="600" 
+                    height="450" 
+                    // style="" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                  </iframe>
+                  </div>
+                  <div className="mt-6 space-y-2">
+                    <div className="flex justify-between">
+                      <span className="text-gray-600">Country:</span>
+                      <span className="font-medium">Ghana</span>
                     </div>
-                    <div className="mt-6 space-y-2">
-                      <div className="flex justify-between">
-                        <span className="text-gray-600">Country:</span>
-                        <span className="font-medium">Ghana</span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span className="text-gray-600">City:</span>
-                        <span className="font-medium">Kumasi</span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span className="text-gray-600">University:</span>
-                        <span className="font-medium">KNUST</span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span className="text-gray-600">Languages:</span>
-                        <span className="font-medium">English, Twi</span>
-                      </div>
+                    <div className="flex justify-between">
+                      <span className="text-gray-600">City:</span>
+                      <span className="font-medium">Kumasi</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span className="text-gray-600">Languages:</span>
+                      <span className="font-medium">English, Twi</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span className="text-gray-600">Favorite Ghanaian Dish:</span>
+                      <span className="font-medium">Jollof Rice</span>
                     </div>
                   </div>
                 </div>
+              </div>
               </div>
             </div>
           </section>
@@ -303,31 +308,33 @@ const Portfolio = () => {
                 
                 {/* Quick Links */}
                 <div className="flex flex-wrap justify-center gap-4 text-sm">
-                  <Link to=''>
-                    <a href="#about" className="text-gray-400 hover:text-teal-400 transition-colors">Home</a>
+                  <Link to='/'>
+                    <div className="text-gray-400 hover:text-teal-400 transition-colors">Home</div>
                   </Link>
                   <Link to='/experience'>
-                    <a href="" className="text-gray-400 hover:text-teal-400 transition-colors">Experience</a>
+                    <div className="text-gray-400 hover:text-teal-400 transition-colors">Experience</div>
                   </Link>
-                  <Link to='courses'>
-                    <a href="" className="text-gray-400 hover:text-teal-400 transition-colors">Courses</a>
+                  <Link to='/courses'>
+                    <div className="text-gray-400 hover:text-teal-400 transition-colors">Courses</div>
                   </Link>
                   {/* <a href="#skills" className="text-gray-400 hover:text-teal-400 transition-colors">Skills</a> */}
                 </div>
                 
                 {/* Social Links */}
                 <div className="flex items-center gap-3">
-                  <a href="#" className="w-7 h-7 bg-gray-700 hover:bg-teal-500 rounded-full flex items-center justify-center transition-colors">
+                  <a href="https://github.com/emmanueldey" className="w-7 h-7 bg-gray-700 hover:bg-teal-500 rounded-full flex items-center justify-center transition-colors">
                     {/* <Github size={14} /> */}
+                    <Github size={16} />
                   </a>
-                  <a href="#" className="w-7 h-7 bg-gray-700 hover:bg-teal-500 rounded-full flex items-center justify-center transition-colors">
+                  <a href="https://linkedin.com/in/emmanuel1010" className="w-7 h-7 bg-gray-700 hover:bg-teal-500 rounded-full flex items-center justify-center transition-colors">
+                    <Linkedin size={16} />
                     {/* <Twitter size={14} /> */}
                   </a>
-                  <a href="#" className="w-7 h-7 bg-gray-700 hover:bg-teal-500 rounded-full flex items-center justify-center transition-colors">
-                    {/* <Instagram size={14} /> */}
-                  </a>
-                  <a href="mailto:emmanuel.dey@example.com" className="w-7 h-7 bg-gray-700 hover:bg-teal-500 rounded-full flex items-center justify-center transition-colors">
-                    {/* <Mail size={14} /> */}
+                  {/* <a href="#" className="w-7 h-7 bg-gray-700 hover:bg-teal-500 rounded-full flex items-center justify-center transition-colors">
+                    <Instagram size={14} />
+                  </a> */}
+                  <a href="mailto:emmanuel.p.dey.28@dartmouth.edu" className="w-7 h-7 bg-gray-700 hover:bg-teal-500 rounded-full flex items-center justify-center transition-colors">
+                    <Mail size={14} />
                   </a>
                 </div>
               </div>
