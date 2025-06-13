@@ -69,7 +69,7 @@ const Portfolio = () => {
           <div className="flex flex-col-reverse md:grid grid-cols-1 lg:grid-cols-2 md:gap-12 items-center">
             <div className="space-y-6">
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
-                Hello, I'm <span className='text-red-500'>Emmanuel</span>
+                Hello, I'm <span className='text-indigo-700'>Emmanuel</span>
               </h1>
               <p className="text-gray-600 text-lg border-l-4 border-indigo-500 pl-4">
                 A Computer Science major with a minor in Human-Centered Design. Passionate about creating technology that positively impacts people's lives.
