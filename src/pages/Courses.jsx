@@ -1,199 +1,27 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Navbar from '../components/Navbar';
 import { Link } from 'react-router-dom';
+import courseData from '../MyData.json'; // Assuming you have a courses data file
 import { BookOpen, Code, Palette, Brain, Calculator, Award, Linkedin, Github, Mail } from 'lucide-react';
 
 const Courses = () => {
   const [activeTab, setActiveTab] = useState('major');
+  // const [courseData, setCourseData] = useState({});
 
-  const courseData = {
-    major: {
-      title: "Computer Science Major",
-        icon: <Code className="w-5 h-5" />,
-      color: "purple",
-      description: "Core computer science courses focusing on programming, algorithms, and software development",
-      courses: [
-        {
-          code: "CS 101",
-          name: "Introduction to Programming",
-          credits: 3,
-          semester: "Fall 2022",
-          grade: "A",
-          description: "Fundamentals of programming using Python. Covers variables, control structures, functions, and basic data structures.",
-          skills: ["Python", "Problem Solving", "Debugging", "Algorithm Design"]
-        },
-        {
-          code: "CS 201",
-          name: "Data Structures and Algorithms",
-          credits: 4,
-          semester: "Spring 2023",
-          grade: "A-",
-          description: "Study of fundamental data structures and algorithms including arrays, linked lists, trees, graphs, sorting, and searching.",
-          skills: ["Data Structures", "Algorithm Analysis", "Big O Notation", "Java"]
-        },
-        {
-          code: "CS 202",
-          name: "Object-Oriented Programming",
-          credits: 3,
-          semester: "Fall 2023",
-          grade: "A",
-          description: "Advanced programming concepts including inheritance, polymorphism, encapsulation, and design patterns.",
-          skills: ["OOP Principles", "Java", "Design Patterns", "UML"]
-        },
-        {
-          code: "CS 301",
-          name: "Database Systems",
-          credits: 3,
-          semester: "Spring 2024",
-          grade: "B+",
-          description: "Database design, SQL, normalization, transactions, and database management systems.",
-          skills: ["SQL", "Database Design", "MySQL", "Data Modeling"]
-        },
-        {
-          code: "CS 302",
-          name: "Web Development",
-          credits: 4,
-          semester: "Fall 2024",
-          grade: "A",
-          description: "Full-stack web development covering HTML, CSS, JavaScript, React, Node.js, and deployment strategies.",
-          skills: ["HTML/CSS", "JavaScript", "React", "Node.js", "MongoDB"]
-        },
-        {
-          code: "CS 401",
-          name: "Software Engineering",
-          credits: 4,
-          semester: "Spring 2025",
-          grade: "In Progress",
-          description: "Software development lifecycle, project management, testing, and team collaboration methods.",
-          skills: ["Agile", "Testing", "Git", "Project Management"]
-        },
-        {
-          code: "CS 402",
-          name: "Computer Networks",
-          credits: 3,
-          semester: "Spring 2025",
-          grade: "In Progress",
-          description: "Network protocols, architecture, security, and distributed systems concepts.",
-          skills: ["Networking", "TCP/IP", "Security", "Distributed Systems"]
-        }
-      ]
-    },
-    minor: {
-      title: "Human-Centered Design Minor",
-        icon: <Palette className="w-5 h-5" />,
-      color: "blue",
-      description: "Interdisciplinary approach to design thinking and user experience",
-      courses: [
-        {
-          code: "HCD 101",
-          name: "Introduction to Design Thinking",
-          credits: 3,
-          semester: "Fall 2022",
-          grade: "A",
-          description: "Fundamentals of human-centered design process, empathy, ideation, prototyping, and testing.",
-          skills: ["Design Thinking", "User Research", "Prototyping", "Empathy Mapping"]
-        },
-        {
-          code: "HCD 201",
-          name: "User Experience Research",
-          credits: 3,
-          semester: "Spring 2023",
-          grade: "A-",
-          description: "Methods for understanding user needs through interviews, surveys, usability testing, and analytics.",
-          skills: ["User Research", "Usability Testing", "Analytics", "Interview Techniques"]
-        },
-        {
-          code: "HCD 202",
-          name: "Interface Design",
-          credits: 3,
-          semester: "Fall 2023",
-          grade: "A",
-          description: "Visual design principles, typography, color theory, and interface design for digital products.",
-          skills: ["UI Design", "Figma", "Typography", "Color Theory", "Wireframing"]
-        },
-        {
-          code: "HCD 301",
-          name: "Interaction Design",
-          credits: 4,
-          semester: "Spring 2024",
-          grade: "B+",
-          description: "Designing interactive systems with focus on user behavior, micro-interactions, and accessibility.",
-          skills: ["Interaction Design", "Accessibility", "Micro-interactions", "User Flows"]
-        },
-        {
-          code: "HCD 401",
-          name: "Design Strategy",
-          credits: 3,
-          semester: "Fall 2024",
-          grade: "A-",
-          description: "Strategic design thinking for business impact, design systems, and organizational change.",
-          skills: ["Design Strategy", "Design Systems", "Business Impact", "Leadership"]
-        }
-      ]
-    },
-    other: {
-      title: "Additional Courses",
-        icon: <Brain className="w-5 h-5" />,
-      color: "green",
-      description: "Supplementary courses in mathematics, communication, and professional development",
-      courses: [
-        {
-          code: "MATH 201",
-          name: "Calculus I",
-          credits: 4,
-          semester: "Fall 2022",
-          grade: "B+",
-          description: "Limits, derivatives, applications of derivatives, and introduction to integration.",
-          skills: ["Calculus", "Mathematical Reasoning", "Problem Solving"]
-        },
-        {
-          code: "MATH 202",
-          name: "Discrete Mathematics",
-          credits: 3,
-          semester: "Spring 2023",
-          grade: "A-",
-          description: "Logic, set theory, combinatorics, graph theory, and mathematical proofs.",
-          skills: ["Logic", "Set Theory", "Graph Theory", "Mathematical Proofs"]
-        },
-        {
-          code: "STAT 301",
-          name: "Statistics for Computer Science",
-          credits: 3,
-          semester: "Fall 2023",
-          grade: "B+",
-          description: "Probability, statistical inference, hypothesis testing, and data analysis methods.",
-          skills: ["Statistics", "Probability", "Data Analysis", "R Programming"]
-        },
-        {
-          code: "ENG 201",
-          name: "Technical Writing",
-          credits: 3,
-          semester: "Spring 2024",
-          grade: "A",
-          description: "Professional communication, technical documentation, and presentation skills.",
-          skills: ["Technical Writing", "Documentation", "Communication", "Presentations"]
-        },
-        {
-          code: "BUS 301",
-          name: "Entrepreneurship Fundamentals",
-          credits: 3,
-          semester: "Fall 2024",
-          grade: "A-",
-          description: "Business planning, market analysis, startup strategies, and innovation management.",
-          skills: ["Business Planning", "Market Analysis", "Innovation", "Leadership"]
-        },
-        {
-          code: "PSY 201",
-          name: "Cognitive Psychology",
-          credits: 3,
-          semester: "Spring 2024",
-          grade: "B+",
-          description: "Human cognition, memory, perception, and decision-making processes.",
-          skills: ["Psychology", "Human Behavior", "Research Methods", "Critical Thinking"]
-        }
-      ]
-    }
-  };
+  // setCourseData(MyData.CoursesPage)
+  // useEffect(() => {
+  // }, []);
+
+  const getIcon = (iconName) => {
+    const icons = {
+      code: <Code className="w-5 h-5" />,
+      palette: <Palette className="w-5 h-5" />,
+      brain: <Brain className="w-5 h-5" />,
+      calculator: <Calculator className="w-5 h-5" />,
+      bookOpen: <BookOpen className="w-5 h-5" />,
+    };
+    return icons[iconName] || <BookOpen className="w-5 h-5" />;
+  }
 
   const getColorClasses = (color, variant = 'primary') => {
     const colors = {
@@ -248,7 +76,7 @@ const Courses = () => {
     return totalCredits > 0 ? (totalPoints / totalCredits).toFixed(2) : '0.00';
   };
 
-  const currentSection = courseData[activeTab];
+  const currentSection = courseData.CoursesPage[activeTab];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-50 to-blue-50">
@@ -267,32 +95,24 @@ const Courses = () => {
         {/* Academic Summary */}
         <div className="grid md:grid-cols-2 gap-6 mb-12">
           <div className="bg-white rounded-xl shadow-lg p-6 text-center">
-            {/* <BookOpen className="w-8 h-8 text-purple-600 mx-auto mb-3" /> */}
             <h3 className="text-2xl font-bold text-gray-900 mb-1">
-              {Object.values(courseData).reduce((acc, section) => acc + section.courses.length, 0)}
+              {Object.values(courseData.CoursesPage).reduce((acc, section) => acc + section.courses.length, 0)}
             </h3>
             <p className="text-gray-600">Total Courses</p>
           </div>
           <div className="bg-white rounded-xl shadow-lg p-6 text-center">
-            {/* <Calculator className="w-8 h-8 text-blue-600 mx-auto mb-3" /> */}
             <h3 className="text-2xl font-bold text-gray-900 mb-1">
-              {Object.values(courseData).reduce((acc, section) =>
+              {Object.values(courseData.CoursesPage).reduce((acc, section) =>
                 acc + section.courses.reduce((sum, course) => sum + course.credits, 0), 0
               )}
             </h3>
             <p className="text-gray-600">Total Credits</p>
           </div>
-          {/* <div className="bg-white rounded-xl shadow-lg p-6 text-center">
-            <h3 className="text-2xl font-bold text-gray-900 mb-1">
-              {calculateGPA(Object.values(courseData).flatMap(section => section.courses))}
-            </h3>
-            <p className="text-gray-600">Current GPA</p>
-          </div> */}
         </div>
 
         {/* Tab Navigation */}
         <div className="flex flex-wrap justify-center gap-4 mb-8">
-          {Object.entries(courseData).map(([key, section]) => (
+          {Object.entries(courseData.CoursesPage).map(([key, section]) => (
             <button
               key={key}
               onClick={() => setActiveTab(key)}
@@ -301,7 +121,7 @@ const Courses = () => {
                   : `bg-white ${getColorClasses(section.color, 'tabInactive')}`
                 }`}
             >
-              {section.icon}
+              {getIcon( section.icon)}
               <span>{section.title}</span>
               <span className="text-sm opacity-75">({section.courses.length})</span>
             </button>
@@ -313,7 +133,7 @@ const Courses = () => {
           <div className="flex items-center space-x-4 mb-4">
             <div className={`p-4 rounded-xl ${getColorClasses(currentSection.color, 'primary')}`}>
               <div className="w-8 h-8">
-                {currentSection.icon}
+                {getIcon(currentSection.icon)}
               </div>
             </div>
             <div className="flex-1">
@@ -333,10 +153,6 @@ const Courses = () => {
               </div>
               <div className="text-gray-600">Credits</div>
             </div>
-            {/* <div className="text-center">
-              <div className="text-2xl font-bold text-gray-900">{calculateGPA(currentSection.courses)}</div>
-              <div className="text-gray-600">GPA</div>
-            </div> */}
           </div>
         </div>
 
@@ -354,10 +170,6 @@ const Courses = () => {
                   <p className="text-sm text-gray-500">{course.semester}</p>
                 </div>
                 <div className="text-right ml-4">
-                  {/* <span className={`px-3 py-1 rounded-full text-sm font-medium ${getGradeColor(course.grade)}`}>
-                    {course.grade}
-                  </span>
-                  <p className="text-sm text-gray-500 mt-2">{course.credits} credits</p> */}
                 </div>
               </div>
 
